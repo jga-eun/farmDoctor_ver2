@@ -32,15 +32,15 @@ section{
     line-height: 1.8;
 }
 .content3 {
-    line-height: 1.8;
+    line-height: 1.8; /*농산물 가격 버튼 만들거면 조금 줄여야 함 한 1.5 정도?*/
 }
 .content4 {
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 30px; /*농산물 가격 버튼 만들거면 15px로 줄여야 함*/
     color: #ffce08;
     text-align: center;
 }
-.section3 button {
+/* .section3 button {
     width: 900px;
     background-color: antiquewhite;
     color: #3f7853;
@@ -50,7 +50,7 @@ section{
     border: none;
     font-size: 50px;
     margin-bottom: 30px;
-}
+} 농산물 가격 이동 버튼 없앰*/
 
  /*모바일용*/
  @media (max-width:600px) {
@@ -64,12 +64,13 @@ section{
     .section2 {
         width: 380px;
         text-align: justify;
+        font-size: medium;
     }
     /* .p-name {
         font-size: 20px;
     } */
-    .section3 button {
+    /* .section3 button {
         width: 300px;
         font-size: 20px;
-    }
+    } 농산물 가격 이동 버튼 없앰*/ 
  }

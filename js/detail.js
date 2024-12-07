@@ -174,23 +174,23 @@ document.addEventListener('DOMContentLoaded', () => {
       const selectedProduct = localStorage.getItem('selectedProduct');
       if (selectedProduct) {
           updateDetailPage(selectedProduct);
-          setupGoToPriceButton(selectedProduct); // 버튼 설정 추가
+          // setupGoToPriceButton(selectedProduct); // 농산물 가격 이동 버튼 관련 업데이트 함수
           localStorage.removeItem('selectedProduct');
       }
   }
 });
-/**
- * Go to Price 버튼 관련 함수
- * @param {string} productName - 선택된 농산물 이름
- */
-function setupGoToPriceButton(productName) {
-  const goToPriceBtn = document.getElementById('goToPriceBtn');
-  if (goToPriceBtn) {
-      goToPriceBtn.addEventListener('click', () => {
-          // 농산물 이름에 맞는 페이지로 이동
-          const productPage = `${productName.toLowerCase().replace(/\s+/g, '-')}-price.html`;
-          window.location.href = productPage;
-      });
-  }
-}
-//이부분입니다 !!!!! price 페이지에 맞게 수정하거나 이 페이지에 맞게 수정할 부분.. 지금은 카테고리 버튼에 맞게 이동하게끔 되어 있어요 ex) category에서 apple 누르면 apple 세부사항 뜨고 go to price 누르면 apple-price.html로 이동
+// /**
+//  * Go to Price 버튼 관련 함수
+//  * @param {string} productName - 선택된 농산물 이름
+//  */
+// function setupGoToPriceButton(productName) {
+//   const goToPriceBtn = document.getElementById('goToPriceBtn');
+//   if (goToPriceBtn) {
+//       goToPriceBtn.addEventListener('click', () => {
+//           // 농산물 이름에 맞는 페이지로 이동
+//           const productPage = `${productName.toLowerCase().replace(/\s+/g, '-')}-price.html`;
+//           window.location.href = productPage;
+//       });
+//   }
+// }
+// //이부분입니다 !!!!! price 페이지에 맞게 수정하거나 이 페이지에 맞게 수정할 부분.. 지금은 카테고리 버튼에 맞게 이동하게끔 되어 있어요 ex) category에서 apple 누르면 apple 세부사항 뜨고 go to price 누르면 apple-price.html로 이동

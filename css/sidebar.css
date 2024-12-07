@@ -1,0 +1,74 @@
+
+/* 사이드바 스타일 */
+ #mySidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3f7853;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+ }
+ 
+ #closeBtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 72px; /* 기본 크기 2배 */
+    margin-left: 50px;
+    margin-bottom: 10px;
+    color: #ffce08;
+    cursor: pointer;
+ }
+ 
+ #menuTitle {
+    padding: 32px; /* 기본 패딩 2배 */
+    text-decoration: none;
+    color: #ffce08;
+    display: block;
+    transition: 0.3s;
+    font-size: 48px; /* x-large의 약 2배 */
+ }
+ 
+ .menuItem {
+    padding: 32px; /* 기본 패딩 2배 */
+    text-decoration: none;
+    color: #ECE3CE;
+    display: block;
+    transition: 0.3s;
+    border-bottom: 2px solid #ECE3CE;
+    font-size: 32px; /* 기본 글자 크기 2배 */
+ }
+ 
+ .menuItem:hover {
+    background-color: #226A3F;
+ }
+ 
+ .xi-bars {
+    cursor: pointer;
+ }
+ 
+ .sidebar-width {
+    width: 500px;
+ }
+ 
+ /*모바일용*/
+ @media (max-width:600px) {
+    #closeBtn {
+        font-size: 36px; /* 모바일에서는 원래 크기로 */
+    }
+    #menuTitle {
+        padding: 16px;
+        font-size: x-large;
+    }
+    .menuItem {
+        padding: 16px;
+        font-size: 16px;
+    }
+    .sidebar-width {
+        width: 250px;
+    }
+ }

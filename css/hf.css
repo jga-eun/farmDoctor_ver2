@@ -1,0 +1,41 @@
+/*헤더&푸터 설정 파일입니다*/
+
+/*헤더 설정*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 80px;
+    font-weight: bold;
+    color: #ffce08;
+    text-align: center;
+}
+.xi-bars {
+    font-size: 100px;
+    margin-left: 2%;
+}
+.xi-home-o {
+    font-size: 100px;
+    margin-right: 2%;
+}
+
+/*footer 설정*/
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: #ECE3CE;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+/*모바일용*/
+@media (max-width:600px) {
+    header {font-size: 35px;}
+    .xi-bars {font-size: 55px;}
+    .xi-home-o {font-size: 55px;}
+    .header1 img {width: 10px;} 
+    footer {font-size: 8px;}
+    
+}

@@ -1,0 +1,75 @@
+/*전체적인 설정 부분 */
+body {
+    background-color: #3f7853;
+    font-family: "Inknut Antiqua", serif;
+}
+
+/*개별 설정 부분*/
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .p-name {
+    color: #ffce08;
+    font-size: 50px;
+} */
+.section1 img {
+    width: 1400px;
+    border-radius: 20px;
+}
+.section2 {
+    margin: 2%;
+    width: 100%;
+    color: #ECE3CE;
+    text-align: center;
+    font-size: 35px;
+}
+.content1 {
+    line-height: 1.8;
+}
+.content2 {
+    line-height: 1.8;
+}
+.content3 {
+    line-height: 1.8;
+}
+.content4 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #ffce08;
+    text-align: center;
+}
+.section3 button {
+    width: 900px;
+    background-color: antiquewhite;
+    color: #3f7853;
+    font-weight: bold;
+    font-family: "Inknut Antiqua", serif;
+    border-radius: 50px; 
+    border: none;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+ /*모바일용*/
+ @media (max-width:600px) {
+    .header1 {
+        font-size: 20px;
+    }
+    .section1 img {
+        margin-top: 15px;
+        width: 380px;
+    }
+    .section2 {
+        width: 380px;
+        text-align: justify;
+    }
+    /* .p-name {
+        font-size: 20px;
+    } */
+    .section3 button {
+        width: 300px;
+        font-size: 20px;
+    }
+ }

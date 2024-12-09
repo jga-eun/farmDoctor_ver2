@@ -1,0 +1,59 @@
+/*전체적인 설정 부분*/
+body {
+    background-color: #3f7853;
+    font-family: "Inknut Antiqua", serif;
+ }
+
+/*개별 설정 부분*/
+.section1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.section2 {
+    display: flex;
+    justify-content: center;
+}
+.next {
+    margin: 1.5%;
+}
+/*f링크 설정 */
+a {
+    text-decoration: none;
+    font-size: 40px;
+}
+a:link {
+    color: #ECE3CE;
+    
+}
+a:visited {
+    color: #ffce08;
+}
+button {
+    background-color: #ECE3CE;
+    width: 28%; /*원래 정한건 4*3 배열이었지만 10개로 줄면서 3*4 배열로 바꿈*/
+    margin: 2%;
+    height: 400px; /*데스크탑 기준 버튼 크기*/
+    border-radius: 50px; 
+    border: none;
+    font-size: 60px;
+    color: #3A4D39;
+    font-weight: bold;
+    font-family: "Inknut Antiqua", serif;
+}
+ /*모바일용*/
+ @media (max-width:600px) {
+    .section1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly; /* 버튼을 중앙 정렬 */
+    }
+    button {
+        width: 45%; /* 모바일에서 버튼 너비를 줄여 2열 배치 */
+        height: 230px; /* 모바일에서 버튼 높이 조정 */
+        font-size: 25px;
+    }
+    a {
+        font-size: 20px;
+    }
+ }

@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // fetchPrice 함수: 당일, 하루 전, 한 달 전 가격 가져오기
 function fetchPrice(productNo,categoryCode) {
-    const oneDayAgoApiEndpoint = `url`;
+    const oneDayAgoApiEndpoint = `http://www.kamis.co.kr/service/price/xml.do?action=dailySalesList&p_cert_key=49b929a4-2d1e-4acd-a86b-8ba4ea43f866&p_cert_id=3723&p_returntype=json`;
 
     return fetch(oneDayAgoApiEndpoint)
         .then(response => {
@@ -172,7 +172,7 @@ function fetchPredictions(koreanProductName) {
     fetch(apiEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ date: "2024-12-07" })
+        body: JSON.stringify({ date: "2024-12-10" })
     })
         .then(response => {
             if (!response.ok) {

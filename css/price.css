@@ -1,0 +1,161 @@
+body{
+    background-color: #3f7853;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+/* 메인 콘텐츠 */
+.trend-page {
+    padding: 5px;
+    text-align: center;
+}
+
+/* Prediction Row */
+.prediction {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+.prediction-box {
+    background-color: #e6f7ff;
+    color: #3f7853;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 45%;
+    height: 320px;
+}
+.prediction-box p {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+.prediction-box h2 {
+    margin-bottom: 10px;
+    color: #F7B200;
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+.prediction-box .note {
+    margin-top: 10px;
+    font-size: 11px;
+    color: #226A3F;
+}
+
+/* History Row */
+.history {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.history-box {
+    background-color: #e6ffe6;
+    color: #3f7853;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 10px;
+    width: 45%;
+    height: 280px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.history-box2 {
+    background-color: #e6ffe6;
+    color: #3f7853;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 10px;
+    width: 28%;
+    height: 250px;
+    text-align: center;
+}
+#ex{
+    font-size: 20px;
+}
+.history-box p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+.history-box h3 {
+    margin-bottom: 10px;
+    color: #F7B200;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.history-box2 h3 {
+    margin-bottom: 10px;
+    color: #F7B200;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+
+    .prediction-box {
+        font-size: 20px;
+        text-align: center;
+        height: 300px;
+        margin-bottom: 5px;
+    }
+    .prediction-box h2 {
+        font-size: 18px;
+    }
+    .prediction-box .note {
+        margin-top: 1px;
+        font-size: 10px;
+    }
+    .history {
+        display: flex;
+        flex-wrap: wrap;
+        /*justify-content: space-between;*/
+        gap: 8px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .history-box {
+        width: 44%;
+        height: 200px;
+        text-align: center;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+
+    .history-box2 {
+        width: 25%;
+        height: 180px;
+        text-align: center;
+        font-size: 18px;
+    }
+    #ex{
+        font-size:18px;
+    }
+    .history-box p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 11px;
+    }
+    .history-box h3 {
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    .history-box2 h3 {
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+
+}

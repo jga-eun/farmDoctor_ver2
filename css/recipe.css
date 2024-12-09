@@ -1,0 +1,118 @@
+/* 공통 스타일 */
+body {
+    font-family: "Inknut Antiqua", serif;
+    background-color: #3f7853;
+    color: #ECE3CE;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3f7853;
+    padding: 10px 20px;
+    color: #ffce08;
+    font-size: 20px;
+}
+
+.xi-bars, .xi-home-o {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* 사이드바 */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #3f7853;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ECE3CE;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #ffce08;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #ECE3CE;
+    cursor: pointer;
+}
+
+/* 레시피 그리드 */
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.recipe-item {
+    border: 1px solid #ECE3CE;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #ECE3CE;
+    color: #3f7853;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recipe-item img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.recipe-item h3 {
+    color: #3f7853;
+    margin: 10px 0 0;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3f7853;
+    color: #ECE3CE;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+    header {
+        font-size: 15px;
+    }
+
+    .xi-bars, .xi-home-o {
+        font-size: 25px;
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

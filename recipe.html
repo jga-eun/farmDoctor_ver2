@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/hf.css">
+    <link rel="stylesheet" href="css/hf-2.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/category.css">
     <link rel="icon" href="img/farmer.png">
@@ -87,7 +87,57 @@
         .xi-bars, .xi-home-o {
             font-size: 2rem;
         }
+        #mySidebar {
+            width: 0;
+            height: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #3f7853;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
 
+        #mySidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #ECE3CE;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #mySidebar a:hover {
+            color: #ffce08;
+        }
+
+        #mySidebar #closeBtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 2rem;
+        }
+        .section2 {
+            display: flex;
+            justify-content: center;
+        }
+        .next {
+            margin: 1.5%;
+        }
+        /*f링크 설정 */
+        a {
+            text-decoration: none;
+            font-size: 40px;
+        }
+        a:link {
+            color: #ECE3CE;
+            
+        }
+        a:visited {
+            color: #ffce08;
+        }
        
         @media (max-width: 600px) {
             header {
@@ -102,6 +152,9 @@
             }
             footer {
                 font-size: 0.7rem; 
+            }
+            a {
+                font-size: 20px;
             }
         }
     </style>

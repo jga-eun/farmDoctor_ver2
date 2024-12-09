@@ -11,9 +11,27 @@ body{
 #content-section h1 {
     color: #F7B200;
     margin-bottom: 20px;
-    font-size: 50px;
+    font-size: 40px;
 }
-
+.section2 {
+    display: flex;
+    justify-content: center;
+}
+.next {
+    margin: 1.5%;
+}
+/*f링크 설정 */
+a {
+    text-decoration: none;
+    font-size: 40px;
+}
+a:link {
+    color: #ECE3CE;
+    
+}
+a:visited {
+    color: #ffce08;
+}
 .button-container {
     display: flex;
     flex-wrap: wrap; /* 버튼을 다음 줄로 넘길 수 있도록 설정 */
@@ -37,9 +55,16 @@ body{
 
 /* 모바일 반응형 */
 @media (max-width: 600px) {
+    #content-section h1 {
+        font-size: 20px;
+    }
+
     .button-container button {
-        height: 150px;
-        width: 30%;
+        height: 200px;
+        width: 45%;
+        font-size: 20px;
+    }
+    a {
         font-size: 20px;
     }
 }

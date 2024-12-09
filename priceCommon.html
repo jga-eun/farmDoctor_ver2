@@ -26,7 +26,7 @@
     <!-- Header -->
     <header>
         <i class="xi-bars" onclick="openNav()"></i>
-        <div class="header1">[ Price ]</div>
+        <div class="header1">[ <span id="product-name">Loading... </span> ]</div>
         <i class="xi-home-o" onclick="location.href='home.html'"></i>
     </header>
     <!-- Section -->
@@ -91,7 +91,9 @@
         function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
         }
- 
+        window.addEventListener('load', function() {
+            closeNav(); // 초기 로드 시 닫힌 상태 유지
+        });
         window.addEventListener('resize', function() {
             const sidebar = document.getElementById("mySidebar");
             if (sidebar.style.width !== "0px") {

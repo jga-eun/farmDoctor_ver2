@@ -33,12 +33,9 @@
     <!-- Section -->
     <section id="content-section">
         <div class="button-container">
-            <button onclick="goToPricePage(398, 'Apple',400)">Apple</button>
-            <button onclick="goToPricePage(81, 'Dried Red Pepper',200)">Dried Red Pepper</button>
-            <button onclick="goToPricePage(1003, 'Garlic',200)">Garlic</button>
-            <button onclick="goToPricePage(365, 'Green Onion',200)">Green Onion</button>
-            <button onclick="goToPricePage(404, 'Korean Pear',400)">Korean Pear</button>
-            <button onclick="goToPricePage(64, 'Korean Radish',200)">Korean Radish</button>
+            <button onclick="goToPricePage(303, 'Lettuce',200)">Lettuce</button>
+            <button onclick="goToPricePage(361, 'Onion',200)">Onion</button>
+            <button onclick="goToPricePage(24, 'Potato',100)">Potato</button>
         </div>
         <div class="section2">
             <div class="next">
@@ -49,6 +46,7 @@
             </div>
         </div>
     </section>
+    <br><br><br><br><br>
     
     <!-- Footer -->
     <footer>
@@ -75,9 +73,11 @@
         function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
         }
+
         window.addEventListener('load', function() {
             closeNav(); // 초기 로드 시 닫힌 상태 유지
         });
+ 
         window.addEventListener('resize', function() {
             const sidebar = document.getElementById("mySidebar");
             if (sidebar.style.width !== "0px") {

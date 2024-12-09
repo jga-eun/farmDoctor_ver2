@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // fetchPrice 함수: 당일, 하루 전, 한 달 전 가격 가져오기
 function fetchPrice(productNo,categoryCode) {
-    const oneDayAgoApiEndpoint = `api 주소`;
+    const oneDayAgoApiEndpoint = `url`;
 
     return fetch(oneDayAgoApiEndpoint)
         .then(response => {

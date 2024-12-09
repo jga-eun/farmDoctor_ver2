@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/hf.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/price.css">
+    <link rel="icon" href="img/farmer.png">
+    <title>Price Prediction</title>
+</head>
+<body>
+    <div id="mySidebar">
+        <div id="closeBtn" onclick="closeNav()">&times;</div>
+        <a href="#" id="menuTitle">Menu</a>
+        <a href="home.html" class="menuItem">Home</a>
+        <a href="" class="menuItem">Profile</a> <!--구현X-->
+        <a href="category.html" class="menuItem">Agricultural Products</a>
+        <a href="seasonal.html" class="menuItem">Seasonal Produce</a> <!--or inform-->
+        <a href=".html" class="menuItem">Recipe</a>
+    </div>
+    <!-- Header -->
+    <header>
+        <i class="xi-bars" onclick="openNav()"></i>
+        <div class="header1">[ <span id="product-name">Loading... </span> ]</div>
+        <i class="xi-home-o" onclick="location.href='home.html'"></i>
+    </header>
+    <!-- Section -->
+    <section class="trend-page">
+        <!-- Prediction Box -->
+        <div class = "prediction">
+            <div class="prediction-box">
+                <h2>Tomorrow's <span id="product-name">Loading...</span> Price Prediction</h2>
+                <p>10,500 won</p>
+                <p class="note">This is a predicted value and may vary.</p>
+            </div>
+            <div class="prediction-box">
+                <h2><span id="product-name">Loading...</span> Price Prediction for Next Week</h2>
+                <p>10,500 won</p>
+                <p class="note">This is a predicted value and may vary.</p>
+            </div>
+        </div>
+
+        <!-- History Row -->
+        <div class="history">
+            <div class="history-box">
+                <h3>Today's <span id="product-name">Loading...</span> Price</h3>
+                <p id="ex"><span class="today-price">Loading...</span></p>
+            </div>
+            <div class="history-box">
+                <h3><span id="product-name">Loading...</span> Price Fluctuations</h3>
+                <p>Yesterday: <span id="fluctuation-yesterday">Loading...</span></p>
+                <p>10 Days Ago: <span id="fluctuation-ten-days-ago">Loading...</span></p>
+                <p>A Month Ago: <span id="fluctuation-a-month-ago">Loading...</span></p>
+            </div>
+            <div class="history-box2">
+                <h3>Yesterday's <span id="product-name">Loading...</span> Price</h3>
+                <p><span class="yesterday-price">Loading...</span></p>
+            </div>
+            <div class="history-box2">
+                <h3><span id="product-name">Loading...</span> Price 10 days Ago</h3>
+                <p><span class="ten-days-ago-price">Loading...</span></p>
+            </div>
+            <div class="history-box2">
+                <h3><span id="product-name">Loading...</span> Price a Month Ago</h3>
+                <p><span class="price-a-month-ago">Loading...</span></p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer1">© 2024 FarmDoctor</div>
+        <div class="footer2">Created for Convergence Capstone Design Project</div>
+        <div class="footer3">Creation Period: September - December 2024</div>
+    </footer>
+
+    <script src="js/priceCommon.js"></script>
+    <script>
+        function openNav() {
+            if (window.innerWidth <= 600) {
+                document.getElementById("mySidebar").style.width = "250px";
+            } else {
+                document.getElementById("mySidebar").style.width = "500px";
+            }
+        }
+ 
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+        window.addEventListener('load', function() {
+            closeNav(); // 초기 로드 시 닫힌 상태 유지
+        });
+        window.addEventListener('resize', function() {
+            const sidebar = document.getElementById("mySidebar");
+            if (sidebar.style.width !== "0px") {
+                if (window.innerWidth <= 600) {
+                    sidebar.style.width = "250px";
+                } else {
+                    sidebar.style.width = "500px";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

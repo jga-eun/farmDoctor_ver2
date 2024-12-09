@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/hf.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/priceButton.css">
+    <link rel="icon" href="img/farmer.png"> 
+    <title>Price Selection List</title>
+</head>
+<body>
+    <div id="mySidebar">
+        <div id="closeBtn" onclick="closeNav()">&times;</div>
+        <a href="#" id="menuTitle">Menu</a>
+        <a href="home.html" class="menuItem">Home</a>
+        <a href="" class="menuItem">Profile</a> <!--구현X-->
+        <a href="category.html" class="menuItem">Agricultural Products</a>
+        <a href="seasonal.html" class="menuItem">Seasonal Produce</a> <!--or inform-->
+        <a href=".html" class="menuItem">Recipe</a>
+    </div>
+    <!-- Header -->
+    <header>
+        <i class="xi-bars" onclick="openNav()"></i>
+        <div class="header1">[ Price List ]</div>
+        <i class="xi-home-o" onclick="location.href='home.html'"></i>
+    </header>
+
+    <!-- Section -->
+    <section id="content-section">
+        <div class="button-container">
+            <button onclick="goToPricePage(398, 'Apple',400)">Apple</button>
+            <button onclick="goToPricePage(81, 'Dried Red Pepper',200)">Dried Red Pepper</button>
+            <button onclick="goToPricePage(1003, 'Garlic',200)">Garlic</button>
+            <button onclick="goToPricePage(365, 'Green Onion',200)">Green Onion</button>
+            <button onclick="goToPricePage(404, 'Korean Pear',400)">Korean Pear</button>
+            <button onclick="goToPricePage(64, 'Korean Radish',200)">Korean Radish</button>
+        </div>
+        <div class="section2">
+            <div class="next">
+                <a href="priceButton.html">-1-</a>
+            </div>
+            <div class="next">
+                <a href="priceButton2.html">-2-</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer1">© 2024 FarmDoctor</div>
+        <div class="footer2">Created for Convergence Capstone Design Project</div>
+        <div class="footer3">Creation Period: September - December 2024</div>
+    </footer>
+    
+    <script>
+        function goToPricePage(productno, name,categoryCode) {
+            // priceCommon 페이지로 이동하면서 URL 파라미터 전달
+            window.location.href = `priceCommon.html?productno=${productno}&name=${name}&category=${categoryCode}`;
+        }
+    </script>
+    <script>
+        function openNav() {
+            if (window.innerWidth <= 600) {
+                document.getElementById("mySidebar").style.width = "250px";
+            } else {
+                document.getElementById("mySidebar").style.width = "500px";
+            }
+        }
+ 
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+        window.addEventListener('load', function() {
+            closeNav(); // 초기 로드 시 닫힌 상태 유지
+        });
+        window.addEventListener('resize', function() {
+            const sidebar = document.getElementById("mySidebar");
+            if (sidebar.style.width !== "0px") {
+                if (window.innerWidth <= 600) {
+                    sidebar.style.width = "250px";
+                } else {
+                    sidebar.style.width = "500px";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

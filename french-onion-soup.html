@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/xeicon.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/hf-2.css">
+    <title>French Onion Soup</title>
+    <style>
+        body {
+            font-family: "Inknut Antiqua", serif;
+            background-color: #3f7853;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* 전체 페이지 높이 */
+        }
+
+        header {
+            font-size: 1.8rem; /* 데스크톱 기본 폰트 크기 */
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .xi-bars, .xi-home-o {
+            font-size: 2rem;
+        }
+
+        section {
+            background-color: #FFFDF4; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 20px auto; 
+            padding: 20px; 
+            border-radius: 10px; 
+            max-width: 600px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        h3 {
+            margin: 10px 0;
+            color: #3f7853;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+            color: #3f7853;
+        }
+
+        footer {
+            background-color: #3f7853;
+            color: #ECE3CE;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        #mySidebar {
+            width: 0;
+            height: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #3f7853;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        #mySidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #ECE3CE;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #mySidebar a:hover {
+            color: #ffce08;
+        }
+
+        #mySidebar #closeBtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.2rem; /* 모바일에서 더 작은 폰트 크기 */
+                padding: 5px 15px;
+            }
+
+            .xi-bars, .xi-home-o {
+                font-size: 1.5rem; /* 모바일에서 아이콘 크기 조정 */
+            }
+
+            h3 {
+                font-size: 1rem; /* 모바일에서 더 작은 폰트 크기 */
+            }
+
+            ul, ol {
+                font-size: 0.9rem; /* 모바일에서 목록 폰트 크기 축소 */
+            }
+
+            footer {
+                font-size: 0.7rem; /* 모바일에서 더 작은 폰트 크기 */
+            }
+
+            section {
+                margin: 10px auto; /* 모바일에서 여백 축소 */
+                padding: 15px; /* 모바일에서 패딩 축소 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidebar">
+        <div id="closeBtn" onclick="closeNav()">&times;</div>
+        <a href="#" id="menuTitle">Menu</a>
+        <a href="home.html" class="menuItem">Home</a>
+        <a href="" class="menuItem">Profile</a> <!--구현X-->
+        <a href="category.html" class="menuItem">Agricultural Products</a>
+        <a href="seasonal.html" class="menuItem">Seasonal Produce</a> <!--or inform-->
+        <a href="recipe.html" class="menuItem">Recipe</a>
+    </div>
+    <header>
+        <i class="xi-bars" onclick="openNav()" style="color:#ffce08;"></i>
+        <div class="header-title">[ French Onion Soup ]</div>
+        <i class="xi-home-o" onclick="location.href='home.html'" style="color:#ffce08;"></i>
+    </header>
+
+    <section>
+        <div style="width: 100%; text-align: center; margin-bottom: 20px;">
+            <img src="img/french-onion-soup.jpg" alt="French Onion Soup">
+        </div>
+        <div style="text-align: left; width: 100%;">
+            <h3>Ingredients</h3>
+            <ul>
+                <li><strong>Main Ingredients:</strong> 2 Medium onions, 2-3 tablespoons Butter, 2-3 cups Water, 100g Mozzarella cheese</li>
+                <li><strong>Seasoning:</strong> 1-2 Chicken stock cubes, Pinch of Salt, Pinch of White pepper</li>
+            </ul>
+            <h3>Steps</h3>
+            <ol>
+                <li>Peel and thinly slice the onions.</li>
+                <li>In a non-stick pan, melt butter over high heat and sauté the onions for 5 minutes until softened.</li>
+                <li>Reduce the heat to low and caramelize the onions, stirring occasionally, for about 30 minutes until they turn deep brown.</li>
+                <li>Add chicken stock cubes and water, and bring to a boil. Season with salt and white pepper to taste.</li>
+                <li>Pour the soup into bowls and top with toasted baguette slices (or whole-grain bread). Sprinkle mozzarella cheese generously on top.</li>
+                <li>Bake in a preheated oven at 200°C until the cheese melts, or microwave for 1-2 minutes. Serve hot and enjoy!</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer1">© 2024 FarmDoctor</div>
+        <div class="footer2">Convergence Capstone Design Project</div>
+        <div class="footer3">Production Period: September - December 2024</div>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
+</html>

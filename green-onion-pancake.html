@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/xeicon.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/hf-2.css">
+    <title>Green Onion Pancake</title>
+    <style>
+        body {
+            font-family: "Inknut Antiqua", serif;
+            background-color: #3f7853;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            font-size: 1.8rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .xi-bars, .xi-home-o {
+            font-size: 2rem;
+        }
+
+        section {
+            background-color: #ECE3CE;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        section h3, section p, section ul, section ol {
+            color: #3f7853;
+        }
+
+        footer {
+            background-color: #3f7853;
+            color: #ECE3CE;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        #mySidebar {
+            width: 0;
+            height: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #3f7853;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        #mySidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #ECE3CE;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #mySidebar a:hover {
+            color: #ffce08;
+        }
+
+        #mySidebar #closeBtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.2rem;
+                padding: 5px 15px;
+            }
+
+            .xi-bars, .xi-home-o {
+                font-size: 1.5rem;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
+
+            ul, ol {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                font-size: 0.7rem;
+            }
+
+            section {
+                margin: 10px auto;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidebar">
+        <div id="closeBtn" onclick="closeNav()">&times;</div>
+        <a href="#" id="menuTitle">Menu</a>
+        <a href="home.html" class="menuItem">Home</a>
+        <a href="" class="menuItem">Profile</a> <!--구현X-->
+        <a href="category.html" class="menuItem">Agricultural Products</a>
+        <a href="seasonal.html" class="menuItem">Seasonal Produce</a> <!--or inform-->
+        <a href="recipe.html" class="menuItem">Recipe</a>
+    </div>
+
+    <header>
+        <i class="xi-bars" onclick="openNav()" style="color:#ffce08;"></i>
+        <div class="header-title">[ Green Onion Pancake ]</div>
+        <i class="xi-home-o" onclick="location.href='home.html'" style="color:#ffce08;"></i>
+    </header>
+
+    <section>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="img/green-onion-pancake.jpg" alt="Green Onion Pancake">
+        </div>
+        <h3>Ingredients</h3>
+        <ul>
+            <li>200g Green Onions</li>
+            <li>1 Squid (cleaned and sliced)</li>
+            <li>2 Handfuls of Shrimp</li>
+            <li>2 Eggs</li>
+            <li><strong>For Batter:</strong></li>
+            <li>1/2 Cup Flour</li>
+            <li>1/2 Cup Tempura Flour</li>
+            <li>1 Cup Water</li>
+            <li>2 Tbsp Cornstarch</li>
+            <li><strong>For Dipping Sauce:</strong></li>
+            <li>3 Tbsp Soy Sauce</li>
+            <li>1 Tbsp Red Chili Powder</li>
+            <li>1 Tbsp Vinegar</li>
+            <li>1 Tbsp Sugar</li>
+            <li>1/2 Tbsp Minced Garlic</li>
+            <li>1/2 Tbsp Minced Green Onion</li>
+            <li>1/2 Tbsp Sesame Seeds</li>
+            <li>1/2 Tbsp Sesame Oil</li>
+        </ul>
+        <h3>Steps</h3>
+        <ol>
+            <li>Wash and trim green onions, then cut them in half.</li>
+            <li>Prepare the batter by mixing flour, tempura flour, water, and cornstarch.</li>
+            <li>Blanch squid and shrimp in boiling water for 1 minute, then set aside.</li>
+            <li>In a large mixing bowl, coat green onions with the batter.</li>
+            <li>Heat a generous amount of oil in a pan and spread the green onions evenly on it.</li>
+            <li>Top with squid and shrimp, then pour the remaining batter and beaten eggs over the top.</li>
+            <li>Cook over medium heat until the bottom is golden and crispy. Flip and cook the other side.</li>
+            <li>Prepare the dipping sauce by combining all the sauce ingredients in a bowl.</li>
+            <li>Serve the pancake hot with the dipping sauce on the side.</li>
+        </ol>
+        <p>This crispy and savory pancake is perfect for sharing on a rainy day!</p>
+    </section>
+
+    <footer>
+        <div class="footer1">© 2024 FarmDoctor</div>
+        <div class="footer2">Convergence Capstone Design Project</div>
+        <div class="footer3">Production Period: September - December 2024</div>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
+</html>

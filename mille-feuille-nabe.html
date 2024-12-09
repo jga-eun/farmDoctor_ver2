@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/xeicon.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/hf-2.css">
+    <title>Mille-Feuille Nabe</title>
+    <style>
+        body {
+            font-family: "Inknut Antiqua", serif;
+            background-color: #3f7853;
+            margin: 0;
+        }
+        header {
+            font-size: 1.8rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .xi-bars, .xi-home-o {
+            font-size: 2rem;
+        }
+
+        section {
+            background-color: #ECE3CE;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        section h3, section p, section ul, section ol {
+            color: #3f7853;
+        }
+
+        #mySidebar {
+            width: 0;
+            height: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #3f7853;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        #mySidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #ECE3CE;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #mySidebar a:hover {
+            color: #ffce08;
+        }
+
+        #mySidebar #closeBtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 2rem;
+        }
+
+        footer {
+            background-color: #3f7853;
+            color: #ECE3CE;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidebar">
+        <div id="closeBtn" onclick="closeNav()">&times;</div>
+        <a href="#" id="menuTitle">Menu</a>
+        <a href="home.html" class="menuItem">Home</a>
+        <a href="" class="menuItem">Profile</a> <!--구현X-->
+        <a href="category.html" class="menuItem">Agricultural Products</a>
+        <a href="seasonal.html" class="menuItem">Seasonal Produce</a> <!--or inform-->
+        <a href="recipe.html" class="menuItem">Recipe</a>
+    </div>
+    <header>
+        <i class="xi-bars" onclick="openNav()" style="color:#ffce08;"></i>
+        <div class="header-title">[ Mille-Feuille Nabe ]</div>
+        <i class="xi-home-o" onclick="location.href='home.html'" style="color:#ffce08;"></i>
+    </header>
+
+    <section>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="img/mille-feuille-nabe.jpg" alt="Mille-Feuille Nabe">
+        </div>
+        <div>
+            <h3>Ingredients</h3>
+            <ul>
+                <li>600g Beef (for Bulgogi or Shabu-shabu)</li>
+                <li>10 Leaves of Napa Cabbage</li>
+                <li>15 Leaves of Perilla (Sesame) Leaves</li>
+                <li>A few Mushrooms</li>
+                <li>2 Handfuls of Bean Sprouts</li>
+                <li><strong>For Broth:</strong></li>
+                <li>A few Anchovies</li>
+                <li>A Few Pieces of Kombu (Dried Seaweed)</li>
+                <li>1/2 Onion</li>
+                <li>A Few Pieces of Radish</li>
+                <li>8 Cups of Water</li>
+                <li><strong>For Dipping Sauce:</strong></li>
+                <li>2 Tbsp Soy Sauce</li>
+                <li>2 Tbsp Vinegar</li>
+                <li>1 Tbsp Sugar</li>
+                <li>1 Tbsp Water</li>
+            </ul>
+            <h3>Steps</h3>
+            <ol>
+                <li>For the broth, combine water, anchovies, kombu, onion, and radish in a pot and bring it to a boil. Once it boils, remove the kombu and simmer for 10 minutes. Strain the broth and set aside.</li>
+                <li>Layer the cabbage, perilla leaves, and beef in a round or oval shape in the hotpot, creating a "mille-feuille" (thousand-layer) arrangement. Repeat the layering process until you’ve built several layers. At the top, place a final layer of cabbage.</li>
+                <li>Once the layers are set, cut the bundle into manageable portions to fit the pot.</li>
+                <li>Pour the broth into the pot, filling it about 2/3 of the way up the ingredients. Add the bean sprouts on top.</li>
+                <li>Slice the onion into thin strips and soak it in cold water to reduce its sharpness. Set aside.</li>
+                <li>For the dipping sauce, mix soy sauce, vinegar, sugar, and water in a bowl.</li>
+                <li>Once the beef is cooked, remove it from the pot, dip it in the sauce, and enjoy! You can also add noodles like udon, rice noodles, or somen to the pot as you go.</li>
+                <li>If the broth reduces too much, feel free to add more broth to maintain the flavor.</li>
+                <li>As a finishing touch, you can make a savory porridge by adding any leftover vegetables to the broth with sesame oil, seaweed, and a beaten egg. Let it simmer until thickened.</li>
+            </ol>
+            <p>Enjoy this warm, comforting dish as a complete meal!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer1">© 2024 FarmDoctor</div>
+        <div class="footer2">Convergence Capstone Design Project</div>
+        <div class="footer3">Production Period: September - December 2024</div>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
+</html>

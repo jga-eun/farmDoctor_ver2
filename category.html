@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/hf.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="icon" href="img/farmer.png">
+    <title>Category</title>
+</head>
+<body>
+    <div id="mySidebar">
+        <div id="closeBtn" onclick="closeNav()">&times;</div>
+        <a href="#" id="menuTitle">Menu</a>
+        <a href="home.html" class="menuItem">Home</a>
+        <a href="" class="menuItem">Profile</a> <!--구현X-->
+        <a href="category.html" class="menuItem">Agricultural Products</a>
+        <a href="seasonal.html" class="menuItem">Seasonal Produce</a> <!--or inform-->
+        <a href="recipe.html" class="menuItem">Recipe</a>
+    </div>
+    <header>
+        <i class="xi-bars" onclick="openNav()"></i>
+        <div class="header1">[ Category ]</div>
+        <i class="xi-home-o"onclick="location.href='home.html'"></i> <!--xi-home(채워져 있는 아이콘)-->
+    </header>
+    <section>
+        <div class="section1">
+            <button id="Apple" onclick="location.href='.html'">Apple</button> <!--버튼 구분할거면 태그 뒤에 id="b1"-->
+            <button id="Dried Red Power" onclick="location.href='.html'">Dried Red Pepper</button>
+            <button id="Garlic" onclick="location.href='.html'">Garlic</button>
+            <button id="Green Onion" onclick="location.href='.html'">Green Onion</button>
+            <button id="Korean Pear" onclick="location.href='.html'">Korean Pear</button>
+            <button id="Korean Radish" onclick="location.href='.html'">Korean Radish</button>
+            <!-- <button onclick="location.href='.html'">Lettuce</button>
+            <button onclick="location.href='.html'">Napa Cabbage</button>
+            <button onclick="location.href='.html'">Onion</button>
+            <button onclick="location.href='.html'">Potato</button> --> <!--페이지 넘김 구현 관련 고민중-->
+        </div>
+        <div class="section2">
+            <div class="next">
+                <a href="category.html">-1-</a>
+            </div>
+            <div class="next">
+                <a href="category2.html">-2-</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer1">© 2024 FarmDoctor</div>
+        <div class="footer2">Created for Convergence Capstone Design Project</div>
+        <div class="footer3">Creation Period: September - December 2024</div>
+    </footer>
+    <script src="js/detail.js"></script>
+    <script>
+        function openNav() {
+            if (window.innerWidth <= 600) {
+                document.getElementById("mySidebar").style.width = "250px";
+            } else {
+                document.getElementById("mySidebar").style.width = "500px";
+            }
+        }
+ 
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+ 
+        window.addEventListener('resize', function() {
+            const sidebar = document.getElementById("mySidebar");
+            if (sidebar.style.width !== "0px") {
+                if (window.innerWidth <= 600) {
+                    sidebar.style.width = "250px";
+                } else {
+                    sidebar.style.width = "500px";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

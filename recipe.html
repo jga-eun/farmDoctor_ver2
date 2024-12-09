@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="css/xeicon.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/hf.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="icon" href="img/farmer.png">
+    <title>Recipe</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #3f7853;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+        main {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+        }
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        @media (max-width: 600px) {
+            .recipe-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .recipe-item {
+            border: 1px solid #ECE3CE;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+            background-color: #ECE3CE; 
+            color: #3f7853; 
+            line-height: 1.2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            aspect-ratio: 1; 
+        }
+        .recipe-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .recipe-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; 
+            border-radius: 5px;
+        }
+        .recipe-item h3 {
+            color: #3f7853; 
+            margin: 10px 0 0;
+            font-size: 1.2rem; 
+        }
+        footer {
+            background-color: #3f7853;
+            color: #ECE3CE;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+        header {
+            font-size: 1.8rem; 
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .xi-bars, .xi-home-o {
+            font-size: 2rem;
+        }
+
+       
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.2rem; 
+                padding: 5px 15px;
+            }
+            .xi-bars, .xi-home-o {
+                font-size: 1.5rem; 
+            }
+            .recipe-item h3 {
+                font-size: 0.9rem; 
+            }
+            footer {
+                font-size: 0.7rem; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidebar">
+        <div id="closeBtn" onclick="closeNav()">&times;</div>
+        <a href="#" id="menuTitle">Menu</a>
+        <a href="home.html" class="menuItem">Home</a>
+        <a href="" class="menuItem">Profile</a> <!--구현X-->
+        <a href="category.html" class="menuItem">Agricultural Products</a>
+        <a href="seasonal.html" class="menuItem">Seasonal Produce</a> <!--or inform-->
+        <a href="recipe.html" class="menuItem">Recipe</a>
+    </div>
+
+    <header>
+        <i class="xi-bars" onclick="openNav()" style="color:#ffce08;"></i>
+        <div class="header1">[ Recipe ]</div>
+        <i class="xi-home-o" onclick="location.href='home.html'" style="color:#ffce08;"></i>
+    </header>
+
+    <main>
+        <section>
+            <div class="recipe-grid">
+                <div class="recipe-item" onclick="location.href='apple.html'">
+                    <img src="img/apple.jpg" alt="Apple">
+                    <h3>Apple</h3>
+                </div>
+                <div class="recipe-item" onclick="location.href='dried-red-pepper.html'">
+                    <img src="img/dried-red-pepper.jpg" alt="Dried Red Pepper">
+                    <h3>Dried Red Pepper</h3>
+                </div>
+                <div class="recipe-item" onclick="location.href='garlic.html'">
+                    <img src="img/garlic.jpg" alt="Garlic">
+                    <h3>Garlic</h3>
+                </div>
+                <div class="recipe-item" onclick="location.href='green-onion.html'">
+                    <img src="img/green-onion.jpg" alt="Green Onion">
+                    <h3>Green Onion</h3>
+                </div>
+                <div class="recipe-item" onclick="location.href='pear.html'">
+                    <img src="img/pear.jpg" alt="Pear">
+                    <h3>Korean Pear</h3>
+                </div>
+                <div class="recipe-item" onclick="location.href='radish.html'">
+                    <img src="img/radish.jpg" alt="Radish">
+                    <h3>Korean Radish</h3>
+                </div>
+            </div>
+
+            <div class="section2">
+                <div class="next">
+                    <a href="recipe.html">-1-</a>
+                </div>
+                <div class="next">
+                    <a href="recipe2.html">-2-</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer1">© 2024 FarmDoctor</div>
+        <div class="footer2">Convergence Capstone Design Project</div>
+        <div class="footer3">Production Period: September - December 2024</div>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
+</html>

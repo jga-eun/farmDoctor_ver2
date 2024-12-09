@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/xeicon.min.css">
+    <link rel="stylesheet" href="css/hf.css">
+    <title>Potato Recipes</title>
+    <style>
+        body {
+            font-family: "Inknut Antiqua", serif;
+            background-color: #3f7853;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            font-size: 1.8rem;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .xi-bars, .xi-home-o {
+            font-size: 2rem;
+        }
+
+        section {
+            flex: 1; 
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .recipe-item {
+            background-color: #ECE3CE;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .recipe-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .recipe-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            height: auto;
+        }
+
+        .recipe-item h3 {
+            margin: 10px 0 0;
+            color: #3f7853;
+        }
+
+        footer {
+            background-color: #3f7853;
+            color: #ECE3CE;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+       
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.2rem; 
+                padding: 5px 15px;
+            }
+
+            .xi-bars, .xi-home-o {
+                font-size: 1.5rem; 
+            }
+
+            .recipe-item h3 {
+                font-size: 1rem;
+            }
+
+            footer {
+                font-size: 0.7rem;}
+
+            .recipe-grid {
+                padding: 10px; 
+                gap: 15px; 
+            }
+
+            .recipe-item {
+                padding: 15px; }
+        }
+
+       
+        #mySidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: #3f7853;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #mySidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #ECE3CE;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #mySidebar a:hover {
+            color: #ffce08;
+        }
+
+        #closeBtn {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            font-size: 2rem;
+            margin-left: 50px;
+            color: #ECE3CE;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="mySidebar">
+        <div id="closeBtn" onclick="closeNav()">&times;</div>
+        <a href="#" id="menuTitle">Menu</a>
+        <a href="home.html" class="menuItem">Home</a>
+        <a href="" class="menuItem">Profile</a> <!--구현X-->
+        <a href="category.html" class="menuItem">Agricultural Products</a>
+        <a href="seasonal.html" class="menuItem">Seasonal Produce</a> <!--or inform-->
+        <a href="recipe.html" class="menuItem">Recipe</a>
+    </div>
+
+    </div>
+
+    <header>
+        <i class="xi-bars" onclick="openNav()" style="color:#ffce08;"></i>
+        <div class="header-title">[ Potato Recipe ]</div>
+        <i class="xi-home-o" onclick="location.href='recipe.html'" style="color:#ffce08;"></i>
+    </header>
+
+    <section>
+        <div class="recipe-grid">
+            <div class="recipe-item" onclick="location.href='potato-pancake.html'">
+                <img src="img/potato-pancakes.jpg" alt="Potato Pancake">
+                <h3>Potato Pancake</h3>
+            </div>
+            <div class="recipe-item" onclick="location.href='braised-potatoes.html'">
+                <img src="img/braised-potatoes.jpg" alt="Braised Potatoes">
+                <h3>Braised Potatoes</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer1">© 2024 FarmDoctor</div>
+        <div class="footer2">Convergence Capstone Design Project</div>
+        <div class="footer3">Production Period: September - December 2024</div>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+    </script>
+</body>
+</html>
